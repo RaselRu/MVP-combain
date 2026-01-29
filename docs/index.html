@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B2B Portal MVP — статический просмотр</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="brand">B2B Portal</div>
+        <div class="nav-section">
+            <div class="nav-title">Основное</div>
+            <a class="nav-link active" href="#dashboard">Пульт</a>
+            <a class="nav-link" href="#projects">Проекты</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-title">Проект</div>
+            <a class="nav-link" href="#ddp">Новый расчёт DDP</a>
+            <a class="nav-link" href="#tnved">ТН ВЭД</a>
+            <a class="nav-link" href="#history">История операций</a>
+            <a class="nav-link" href="#bookmarks">Закладки</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-title">Администрирование</div>
+            <a class="nav-link" href="#admin">Админка</a>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="topbar">
+            <div>
+                <h1 class="page-title">Статический просмотр MVP</h1>
+                <div class="meta">GitHub Pages · Без PHP/MySQL</div>
+            </div>
+            <div class="meta">B2B Portal Preview</div>
+        </div>
+
+        <div class="flash error">
+            Это статическая витрина интерфейса. GitHub Pages не поддерживает PHP и MySQL,
+            поэтому расчёты, вход и хранение данных здесь недоступны.
+            Для проверки работоспособности используйте развертывание на ByetHost.
+        </div>
+
+        <div id="dashboard" class="section-title">Пульт</div>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Активный проект</h3>
+                <p><strong>Проект “Северный импорт”</strong></p>
+                <p class="muted">Импорт оборудования, этап 2.</p>
+                <div class="actions">
+                    <span class="btn btn-secondary">Обзор проекта</span>
+                    <span class="btn btn-primary">Новый расчёт DDP</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Проекты</h3>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Проект</th>
+                        <th>Статус</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Северный импорт</td>
+                        <td><span class="badge">active</span></td>
+                        <td><span class="link-muted">Сделать активным</span></td>
+                    </tr>
+                    <tr>
+                        <td>Южный контракт</td>
+                        <td><span class="badge">active</span></td>
+                        <td><span class="link-muted">Сделать активным</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="projects" class="section-title">Проекты</div>
+        <div class="card">
+            <h3>Список проектов</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Статус</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Северный импорт</td>
+                    <td><span class="badge">active</span></td>
+                    <td><span class="link-muted">Открыть</span></td>
+                </tr>
+                <tr>
+                    <td>Южный контракт</td>
+                    <td><span class="badge">active</span></td>
+                    <td><span class="link-muted">Открыть</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="ddp" class="section-title">Новый расчёт DDP</div>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Входные параметры</h3>
+                <table class="table">
+                    <tbody>
+                    <tr><td>Стоимость товара</td><td>12 500.00 EUR</td></tr>
+                    <tr><td>Фрахт</td><td>1 200.00 EUR</td></tr>
+                    <tr><td>Страхование</td><td>350.00 EUR</td></tr>
+                    <tr><td>Прочие расходы</td><td>150.00 EUR</td></tr>
+                    <tr><td>Курс к RUB</td><td>97.8500</td></tr>
+                    <tr><td>ТН ВЭД</td><td>8471 30 000 0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>Итог (пример)</h3>
+                <p class="muted">Расчёт воспроизводим, ставки фиксированы.</p>
+                <table class="table">
+                    <tbody>
+                    <tr><td>Таможенная стоимость</td><td>1 383 075.00 RUB</td></tr>
+                    <tr><td>Пошлина (5%)</td><td>69 153.75 RUB</td></tr>
+                    <tr><td>НДС (20%)</td><td>290 445.75 RUB</td></tr>
+                    <tr><td><strong>Итого</strong></td><td><strong>1 742 674.50 RUB</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="tnved" class="section-title">ТН ВЭД</div>
+        <div class="card">
+            <h3>Реестр</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Код</th>
+                    <th>Описание</th>
+                    <th>Пошлина</th>
+                    <th>НДС</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>8471 30 000 0</td>
+                    <td>Машины вычислительные, портативные</td>
+                    <td>5%</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>8504 40 830 0</td>
+                    <td>Преобразователи статические</td>
+                    <td>7.5%</td>
+                    <td>20%</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="history" class="section-title">История операций</div>
+        <div class="card">
+            <h3>Журнал проекта</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Событие</th>
+                    <th>Пользователь</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2026-01-29 11:20</td>
+                    <td>Создан расчёт DDP</td>
+                    <td>Иван Петров</td>
+                </tr>
+                <tr>
+                    <td>2026-01-29 09:10</td>
+                    <td>Добавлен код ТН ВЭД</td>
+                    <td>Администратор</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="bookmarks" class="section-title">Закладки</div>
+        <div class="card">
+            <h3>Закладки проекта</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Тип</th>
+                    <th>Область</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Расчёт DDP #120</td>
+                    <td>calculation</td>
+                    <td>project</td>
+                </tr>
+                <tr>
+                    <td>ТН ВЭД: 8471 30 000 0</td>
+                    <td>result</td>
+                    <td>personal</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="admin" class="section-title">Админка</div>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Пользователи</h3>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Email</th>
+                        <th>Роль</th>
+                        <th>Статус</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Администратор</td>
+                        <td>admin@company.local</td>
+                        <td>admin</td>
+                        <td><span class="badge success">активен</span></td>
+                    </tr>
+                    <tr>
+                        <td>Иван Петров</td>
+                        <td>ipetrov@company.local</td>
+                        <td>user</td>
+                        <td><span class="badge success">активен</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>Справочники</h3>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Тип</th>
+                        <th>Код</th>
+                        <th>Значение</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>currency</td>
+                        <td>EUR</td>
+                        <td>EUR</td>
+                    </tr>
+                    <tr>
+                        <td>incoterm</td>
+                        <td>DDP</td>
+                        <td>DDP</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
